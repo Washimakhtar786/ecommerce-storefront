@@ -8,6 +8,7 @@ function Wishlist() {
   const dispatch = useDispatch();
 
   return (
+    <div className="wishlist-page">
     <div className="wishlist-container">
       <h1>Wishlist</h1>
       {wishlistItems.length === 0 && <p>No items in wishlist</p>}
@@ -21,6 +22,7 @@ function Wishlist() {
           </div>
         ))}
       </div>
+    </div>
     </div>
   );
 }

@@ -11,6 +11,7 @@ function Checkout() {
   const handleSubmit = (e) => { e.preventDefault(); alert("Order placed! Thank you."); }
 
   return (
+    <div className="checkout-page">
     <div className="checkout-container">
       <h1>Checkout</h1>
       <form onSubmit={handleSubmit}>
@@ -27,6 +28,7 @@ function Checkout() {
       <h2>Order Summary</h2>
       {cartItems.map((i) => <div key={i.id}>{i.name} x {i.quantity} - ${i.price*i.quantity}</div>)}
       <p>Total: ${total}</p>
+    </div>
     </div>
   );
 }

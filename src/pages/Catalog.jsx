@@ -29,6 +29,7 @@ function Catalog() {
   const dispatch = useDispatch();
 
   return (
+    <div className="catalog-page">
     <div className="container">
       <h1>Product Catalog</h1>
 
@@ -88,6 +89,7 @@ function Catalog() {
             Reset Filters
           </button>
         </div>
+        
 
         {/* PRODUCT GRID */}
         <div className="grid">
@@ -142,6 +144,7 @@ function Catalog() {
           })}
         </div>
       </div>
+    </div>
     </div>
   );
 }

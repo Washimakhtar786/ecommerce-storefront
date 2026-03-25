@@ -3,3 +3,16 @@
 .detail-info { display: flex; flex-direction: column; gap: 10px; }
 .detail-info button { padding: 10px 15px; border: none; border-radius: 5px; cursor: pointer; background: #007bff; color: white; transition: 0.3s; }
 .detail-info button:hover { background: #0056b3; }
+
+.product-detail {
+  display: flex;
+  gap: 20px;
+}
+
+/* TABLET + MOBILE */
+@media (max-width: 1024px) {
+  .product-detail {
+    flex-direction: column;
+    text-align: center;
+  }
+}

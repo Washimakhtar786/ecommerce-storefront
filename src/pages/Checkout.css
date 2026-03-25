@@ -1,4 +1,20 @@
-.checkout-container { max-width:600px; margin:20px auto; padding:20px; }
+.checkout-container { max-width:600px; margin:20px auto; padding:20px;  }
 .checkout-container input, .checkout-container select { width:100%; padding:10px; margin-bottom:10px; border-radius:5px; border:1px solid #ccc; }
 .checkout-container button { padding:10px 15px; border:none; border-radius:5px; background:#007bff; color:white; cursor:pointer; }
 .checkout-container button:hover { background:#0056b3; }
+
+.checkout-page {
+  min-height: 100vh;
+  padding: 30px;
+
+  background: linear-gradient(135deg, #0f2027, #203a43, #2c5364);
+}
+
+/* TABLET + MOBILE */
+@media (max-width: 1024px) {
+  .checkout-container {
+    flex-direction: column;
+  }
+}
+
+

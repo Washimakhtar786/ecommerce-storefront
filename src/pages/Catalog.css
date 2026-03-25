@@ -47,16 +47,16 @@ h1 {
 /* CARD */
 .card {
   background: white;
-  border-radius: 10px;
-  padding: 12px;
+  border-radius: 12px;
+  padding: 15px;
   text-align: center;
   transition: 0.3s;
-  box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+  box-shadow: 0 2px 10px rgba(0,0,0,0.1);
 }
 
 .card:hover {
-  transform: translateY(-6px);
-  box-shadow: 0 8px 25px rgba(0,0,0,0.2);
+  transform: translateY(-5px);
+  box-shadow: 0 8px 25px rgba(0,0,0,0.15);
 }
 
 /* IMAGE */
@@ -151,4 +151,35 @@ h1 {
   display: grid;
   grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
   gap: 20px;
+}
+
+.catalog-page {
+  min-height: 100vh;
+  padding: 20px;
+
+  background: linear-gradient(
+    135deg,
+    #f5f7fa,
+    #e4ecf7
+  );
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 20px;
+}
+
+/* TABLET */
+@media (max-width: 1024px) {
+  .grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+/* MOBILE */
+@media (max-width: 768px) {
+  .grid {
+    grid-template-columns: 1fr;
+  }
 }
