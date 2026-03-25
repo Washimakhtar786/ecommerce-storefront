@@ -1,0 +1,5 @@
+.detail-container { display: flex; flex-wrap: wrap; gap: 30px; max-width: 900px; margin: 20px auto; padding: 20px; }
+.detail-image { width: 400px; border-radius: 10px; object-fit: cover; }
+.detail-info { display: flex; flex-direction: column; gap: 10px; }
+.detail-info button { padding: 10px 15px; border: none; border-radius: 5px; cursor: pointer; background: #007bff; color: white; transition: 0.3s; }
+.detail-info button:hover { background: #0056b3; }

@@ -1,0 +1,5 @@
+.cart-container { max-width: 900px; margin: 20px auto; padding: 20px; }
+.cart-item { display: flex; gap: 20px; align-items: center; margin-bottom: 15px; }
+.cart-item img { width: 120px; border-radius: 10px; object-fit: cover; }
+.cart-item input { width: 50px; margin-right: 10px; }
+.cart-item button { padding: 5px 10px; cursor: pointer; border-radius: 5px; background: red; color: white; border: none; }

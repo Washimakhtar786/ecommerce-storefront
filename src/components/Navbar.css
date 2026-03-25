@@ -1,0 +1,31 @@
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background:  #2874f0;
+  padding: 12px 25px;
+  color: white;
+
+
+
+position: sticky;
+  top: 0;
+  z-index: 1000;
+}
+
+.navbar a { color: white; text-decoration: none; font-weight: 500;  }
+
+.nav-links { display: flex; gap: 20px; }
+
+.nav-links li { list-style: none; }
+
+.nav-links li:hover { text-decoration: underline; }
+
+.logo a { font-weight: bold; font-size: 22px; }
+
+.search {
+  padding: 6px 10px;
+  border-radius: 5px;
+  border: none;
+  width: 250px;
+}
