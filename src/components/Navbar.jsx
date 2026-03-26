@@ -1,33 +1,37 @@
-import React, { useState } from "react";
+import React from "react";
 import { Link } from "react-router-dom";
-import { useSelector } from "react-redux";
 import "./Navbar.css";
 
 function Navbar() {
-  const cartItems = useSelector((state) => state.cart.items);
-  const wishlistItems = useSelector((state) => state.wishlist.items);
-
-  const [search, setSearch] = useState("");
-
   return (
-    <nav className="navbar">
-      <div className="logo"><Link to="/">MyStore</Link></div>
+    <div className="navbar">
 
+      {/* LEFT: LOGO + CATEGORIES */}
+      <div className="nav-left">
+        <div className="logo">MyStore</div>
+
+        <div className="categories">
+          <span>Fashion</span>
+          <span>Mobiles</span>
+          <span>Beauty</span>
+          <span>Electronics</span>
+        </div>
+      </div>
+
+      {/* CENTER: SEARCH */}
       <input
         type="text"
-        placeholder="Search products..."
-        className="search"
-        value={search}
-        onChange={(e) => setSearch(e.target.value)}
+        placeholder="Search for products, brands and more"
+        className="search-bar"
       />
 
-      <ul className="nav-links">
-        <li><Link to="/">Catalog</Link></li>
-        <li><Link to="/cart">Cart ({cartItems.length})</Link></li>
-        <li><Link to="/wishlist">Wishlist ({wishlistItems.length})</Link></li>
-        <li><Link to="/checkout">Checkout</Link></li>
-      </ul>
-    </nav>
+      {/* RIGHT */}
+      <div className="nav-links">
+        <span>Login</span>
+        <span>More</span>
+        <Link to="/cart">Cart</Link>
+      </div>
+    </div>
   );
 }
 

@@ -1,63 +1,97 @@
+/* NAVBAR */
 .navbar {
   display: flex;
-  justify-content: space-between;
   align-items: center;
-  background:  #2874f0;
+  justify-content: space-between;
+
   padding: 12px 25px;
+
+  background: rgba(15, 23, 42, 0.95); /* glass dark */
+  backdrop-filter: blur(10px);
+
   color: white;
 
-
-
-position: sticky;
+  position: sticky;
   top: 0;
   z-index: 1000;
 }
 
-.navbar a { color: white; text-decoration: none; font-weight: 500;  }
-
-.nav-links { display: flex; gap: 20px; }
-
-.nav-links li { list-style: none; }
-
-.nav-links li:hover { text-decoration: underline; }
-
-.logo a { font-weight: bold; font-size: 22px; }
-
-.search {
-  padding: 6px 10px;
-  border-radius: 5px;
-  border: none;
-  width: 250px;
-}
-
-.navbar {
+/* LEFT */
+.nav-left {
   display: flex;
-  justify-content: space-between;
   align-items: center;
-  padding: 15px 20px;
-  flex-wrap: wrap;
+  gap: 20px;
 }
 
-.links {
+/* LOGO */
+.logo {
+  font-size: 22px;
+  font-weight: bold;
+  color: #38bdf8;
+}
+
+/* CATEGORIES */
+.categories {
   display: flex;
   gap: 15px;
 }
 
-/* MOBILE */
+.categories span {
+  font-size: 14px;
+  cursor: pointer;
+  color: #cbd5f5;
+  transition: 0.3s;
+}
+
+.categories span:hover {
+  color: #38bdf8;
+  transform: translateY(-2px);
+}
+
+/* SEARCH */
+.search-bar {
+  width: 40%;
+  padding: 10px 15px;
+
+  border-radius: 20px;
+  border: none;
+  outline: none;
+
+  background: #1e293b;
+  color: white;
+}
+
+/* RIGHT */
+.nav-links {
+  display: flex;
+  gap: 20px;
+}
+
+.nav-links span,
+.nav-links a {
+  cursor: pointer;
+  color: #cbd5f5;
+  text-decoration: none;
+  transition: 0.3s;
+}
+
+.nav-links span:hover,
+.nav-links a:hover {
+  color: #38bdf8;
+}
+
+/* RESPONSIVE */
 @media (max-width: 768px) {
   .navbar {
     flex-direction: column;
-    align-items: flex-start;
+    gap: 10px;
   }
 
-  .links {
-    flex-direction: column;
+  .search-bar {
     width: 100%;
-    margin-top: 10px;
   }
 
-  .navbar input {
-    width: 100%;
-    margin-top: 10px;
+  .categories {
+    overflow-x: auto;
   }
 }
