@@ -3,9 +3,10 @@
   display: flex;
   align-items: center;
   justify-content: space-between;
+  border-radius: 5px;
 
-  padding: 12px 25px;
-
+  padding: 5px 10px;
+  margin-left: 10px;
   background: rgba(15, 23, 42, 0.95); /* glass dark */
   backdrop-filter: blur(10px);
 
@@ -88,10 +89,43 @@
   }
 
   .search-bar {
+  width: 500px;   /* increased size */
+  padding: 10px 15px;
+  border-radius: 6px;
+  border: none;
+  outline: none;
+  font-size: 14px;
+  }
+
+  @media (max-width: 768px) {
+  .search-bar {
     width: 100%;
   }
+}
 
   .categories {
     overflow-x: auto;
   }
+}
+
+.user-email {
+  font-size: 12px;
+  color: #fff;
+}
+
+.logout-btn {
+  background: #ff4d4f;
+  border: none;
+  color: white;
+  padding: 5px 10px;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.logout-btn:hover {
+  background: #d9363e;
+}
+
+.more {
+  cursor: pointer;
 }

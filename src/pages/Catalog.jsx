@@ -1,5 +1,7 @@
+import toast from "react-hot-toast";
 import React from "react";
 import { useSelector, useDispatch } from "react-redux";
+
 
 import { addToCart } from "../features/cart/cartSlice";
 import {
@@ -21,7 +23,7 @@ function Catalog() {
       <div className="container">
         <h1 className="title">Product Catalog</h1>
 
-        {/* PRODUCT GRID ONLY */}
+        {/* PRODUCT GRID */}
         <div className="grid">
           {products.map((p) => {
             const isInWishlist = wishlist.find((i) => i.id === p.id);
@@ -39,7 +41,7 @@ function Catalog() {
                 <h3>{p.name}</h3>
                 <p className="price">${p.price}</p>
 
-                {/* Rating (only display, no filter) */}
+                {/* Rating */}
                 {p.rating && (
                   <p className="rating">
                     {"⭐".repeat(p.rating)} ({p.rating})
@@ -47,24 +49,40 @@ function Catalog() {
                 )}
 
                 <div className="card-buttons">
+                  {/* ADD TO CART */}
                   <button
                     className="btn cart"
-                    onClick={() => dispatch(addToCart(p))}
+                    onClick={() => {
+                      dispatch(addToCart(p));
+                      toast.success("Added to Cart 🛒");
+                    }}
                   >
                     Add to Cart
                   </button>
 
-                  <button className="btn buy">
+                  {/* BUY NOW */}
+                  <button
+                    className="btn buy"
+                    onClick={() => {
+                      dispatch(addToCart(p));
+                      toast.success("Proceeding to Checkout ⚡");
+                    }}
+                  >
                     Buy Now
                   </button>
 
+                  {/* WISHLIST */}
                   <button
                     className="btn wishlist"
-                    onClick={() =>
-                      isInWishlist
-                        ? dispatch(removeFromWishlist(p.id))
-                        : dispatch(addToWishlist(p))
-                    }
+                    onClick={() => {
+                      if (isInWishlist) {
+                        dispatch(removeFromWishlist(p.id));
+                        toast("Removed from Wishlist 💔");
+                      } else {
+                        dispatch(addToWishlist(p));
+                        toast.success("Added to Wishlist ❤️");
+                      }
+                    }}
                   >
                     {isInWishlist ? "❤️" : "🤍"}
                   </button>
